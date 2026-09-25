@@ -1,0 +1,33 @@
+== i) Validasi data
+  N= 16    16x16  min=0.0e+00  dev_jml_baris=1.1e-16  irreducible=True  periode=1  maju_min=8.60e-02  mundur_min=7.92e-02  valid=True
+  N= 32    32x32  min=0.0e+00  dev_jml_baris=2.2e-16  irreducible=True  periode=1  maju_min=9.81e-02  mundur_min=9.10e-02  valid=True
+  N= 64    64x64  min=0.0e+00  dev_jml_baris=1.1e-16  irreducible=True  periode=1  maju_min=9.92e-02  mundur_min=9.60e-02  valid=True
+  N=128  128x128  min=0.0e+00  dev_jml_baris=2.2e-16  irreducible=True  periode=1  maju_min=9.97e-02  mundur_min=9.81e-02  valid=True
+  N=256  256x256  min=0.0e+00  dev_jml_baris=2.2e-16  irreducible=True  periode=1  maju_min=1.19e-07  mundur_min=1.20e-07  valid=True
+  N=512  512x512  min=0.0e+00  dev_jml_baris=2.2e-16  irreducible=True  periode=1  maju_min=9.99e-02  mundur_min=9.95e-02  valid=True
+== ii) Singularitas A dan normalisasi
+  N= 16  |1^T A|max=6.9e-17  pivot_akhir_A=2.9e-16  pivot_min_B=6.50e-03  z1=1.0  1^T z=14.0435  |1^T pi - 1|=0.0e+00
+  N= 32  |1^T A|max=8.3e-17  pivot_akhir_A=1.1e-16  pivot_min_B=3.34e-03  z1=1.0  1^T z=27.9565  |1^T pi - 1|=0.0e+00
+  N= 64  |1^T A|max=1.2e-16  pivot_akhir_A=2.1e-16  pivot_min_B=1.70e-03  z1=1.0  1^T z=55.7826  |1^T pi - 1|=0.0e+00
+  N=128  |1^T A|max=1.1e-16  pivot_akhir_A=4.2e-17  pivot_min_B=8.55e-04  z1=1.0  1^T z=111.4348  |1^T pi - 1|=0.0e+00
+  N=256  |1^T A|max=1.2e-16  pivot_akhir_A=2.8e-17  pivot_min_B=1.19e-07  z1=1.0  1^T z=222.7391  |1^T pi - 1|=0.0e+00
+  N=512  |1^T A|max=1.2e-16  pivot_akhir_A=5.6e-17  pivot_min_B=2.15e-04  z1=1.0  1^T z=445.3478  |1^T pi - 1|=0.0e+00
+== iii) Bandwidth dan penyimpanan
+  N= 16  T(p,q)=(2,1)  B(p,q)=(1,2)  dense=256  band_eksak=60  band+fill=80  rasio=3.2x
+  N= 32  T(p,q)=(2,1)  B(p,q)=(1,2)  dense=1024  band_eksak=124  band+fill=160  rasio=6.4x
+  N= 64  T(p,q)=(2,1)  B(p,q)=(1,2)  dense=4096  band_eksak=252  band+fill=320  rasio=12.8x
+  N=128  T(p,q)=(2,1)  B(p,q)=(1,2)  dense=16384  band_eksak=508  band+fill=640  rasio=25.6x
+  N=256  T(p,q)=(2,1)  B(p,q)=(1,2)  dense=65536  band_eksak=1020  band+fill=1280  rasio=51.2x
+  N=512  T(p,q)=(2,1)  B(p,q)=(1,2)  dense=262144  band_eksak=2044  band+fill=2560  rasio=102.4x
+== iv) Uji solver
+  N=16: maks|pi_dense - pi_band|=2.8e-17  |PB-LU| dense=1.4e-17 band=1.4e-17  tukar=0/0
+  birth-death N=6 (pi via detailed balance): galat dense=8.3e-17 band=8.3e-17
+  doubly stochastic N=8 (pi = 1/N): galat dense=1.7e-16 band=1.7e-16
+  pivot p=1 q=2: tukar=8/8  |PB-LU|=5.6e-17/5.6e-17  galat x=1.5e-14/3.6e-15  q(U)=3
+  pivot p=2 q=1: tukar=7/7  |PB-LU|=2.2e-16/2.2e-16  galat x=4.4e-15/1.5e-14  q(U)=3
+  N= 16: maks|pi_dense - pi_band|=2.8e-17  tukar=0/0
+  N= 32: maks|pi_dense - pi_band|=1.4e-17  tukar=0/0
+  N= 64: maks|pi_dense - pi_band|=1.0e-17  tukar=0/0
+  N=128: maks|pi_dense - pi_band|=8.7e-18  tukar=0/0
+  N=256: maks|pi_dense - pi_band|=3.5e-18  tukar=0/0
+  N=512: maks|pi_dense - pi_band|=3.0e-18  tukar=0/0
